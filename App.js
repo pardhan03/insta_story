@@ -5,12 +5,13 @@ import {
   Text,
 } from 'react-native';
 import StoryCircleListItem from './src/StoryCircleListItem';
+import Story from './src/Story';
 
 function App() {
 
   return (
     <View >
-      <StoryCircleListItem/>
+      <Story/>
     </View>
   );
 }

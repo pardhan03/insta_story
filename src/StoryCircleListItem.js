@@ -1,7 +1,7 @@
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React, { useState } from 'react'
 
-const StoryCircleListItem = ({ item }) => {
+const StoryCircleListItem = ({item}) => {
   const [isPressed, setIsPressed] = useState(false)
   return (
     <View style={styles.container}>
@@ -12,13 +12,13 @@ const StoryCircleListItem = ({ item }) => {
         : {
           borderColor:  'grey',
         },]}>
-        <Image source={require('./assets/images/storyImages/photo_nine.jpg')} style={styles.imageStyle} />
+        <Image source={item?.path} style={styles.imageStyle} />
       </TouchableOpacity>
       <Text
           numberOfLines={1}
           ellipsizeMode="tail"
           style={styles.text}>
-          {'Manish Pardhan'}
+          {item?.name}
         </Text>
     </View>
   )
@@ -28,6 +28,7 @@ export default StoryCircleListItem
 
 const styles = StyleSheet.create({
   container: {
+    flex:1,
     marginVertical: 5,
     marginRight: 10,
   },

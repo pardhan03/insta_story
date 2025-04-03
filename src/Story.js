@@ -1,10 +1,11 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View, Image } from 'react-native'
 import React from 'react'
+import StoryCircleListView from './StoryCircleListView'
 
 const Story = () => {
   return (
-    <View>
-      <Text>Story</Text>
+    <View >
+      <StoryCircleListView/>
     </View>
   )
 }
